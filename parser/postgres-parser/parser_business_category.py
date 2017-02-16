@@ -1,4 +1,6 @@
 # Parse business categories each business is listed under into a Postgres database. If a business is listed under three different categories then the categories will be parsed into three different rows.
+# Version 1.0
+# Author: Manoj Pravakar Saha
 
 # Import Psycopg Postgres adapter for Python
 import psycopg2
@@ -9,7 +11,7 @@ import json
 # Open a connection to the database
 db_conn = psycopg2.connect("dbname='database_name' host='server_address' user='username' password='password'")
 
-# Initialize an empty list for temporarily holding JSON data
+# Initialize an empty list for temporarily holding a JSON object
 data = []
 
 # Open a JSON file from the dataset and read data line-by-line iteratively
