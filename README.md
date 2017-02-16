@@ -1,1 +1,3 @@
-# yelp_utep_2017_team5
+Yelp Dataset (Round 9)
+
+Data mining project repository
