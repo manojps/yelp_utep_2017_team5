@@ -28,3 +28,5 @@ with open('yelp_academic_dataset_business.json') as fileobject:
 			print(data['business_id'])
 			i += 1
 		
+# Close database connection
+db_conn.close()

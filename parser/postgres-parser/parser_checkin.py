@@ -36,3 +36,5 @@ with open('yelp_academic_dataset_checkin.json') as fileobject:
 			
 			i += 1
 		
+# Close database connection
+db_conn.close()
