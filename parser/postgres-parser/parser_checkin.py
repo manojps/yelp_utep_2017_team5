@@ -31,7 +31,7 @@ with open('yelp_academic_dataset_checkin.json') as fileobject:
 			
 			# Commit the data in database
 			cur = db_conn.cursor()
-			cur.execute("insert into checkin_extended (checkin_day, checkin_hour, checkin_minute, checkin_time, business_id, type) values(%s, %s, %s, %s, %s, %s)", (data['time'][i][:3], hour, minute, data['time'][i][4:],data['business_id'], data['type']))
+			cur.execute("insert into checkin_extended (checkin_day, checkin_hour, checkin_minute, business_id, type) values(%s, %s, %s, %s, %s)", (data['time'][i][:3], hour, minute, data['business_id'], data['type']))
 			db_conn.commit()
 			
 			i += 1
