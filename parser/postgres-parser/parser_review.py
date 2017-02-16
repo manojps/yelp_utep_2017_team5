@@ -1,4 +1,4 @@
-# Parse reviews in a database table
+# Parse reviews in a Postgres database
 # Version 1.0
 # Author: Manoj Pravakar Saha
 

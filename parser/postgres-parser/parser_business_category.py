@@ -18,6 +18,7 @@ data = []
 with open('yelp_academic_dataset_business.json') as fileobject:
 	for line in fileobject:
 		data = json.loads(line)
+
 		# Parse the JSON object in your database
 		i=0
 		while data['categories'] is not None and i<len(data['categories']):

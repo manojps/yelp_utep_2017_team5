@@ -1,4 +1,4 @@
-# Parse listed businesses in a database table with all fields, except categories
+# Parse listed businesses in a Postgres database with all fields, except categories
 # Version 1.0
 # Author: Manoj Pravakar Saha
 
