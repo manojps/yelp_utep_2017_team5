@@ -25,7 +25,7 @@ with open('yelp_academic_dataset_business.json') as fileobject:
 			cur = db_conn.cursor()
 			cur.execute("insert into business_category (business_id, category) values(%s, %s)", (data['business_id'], data['categories'][i]))
 			db_conn.commit()
-			print(data['business_id'])
+			#print(data['business_id'])
 			i += 1
 		
 # Close database connection

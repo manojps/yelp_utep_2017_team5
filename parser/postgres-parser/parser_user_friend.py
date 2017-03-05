@@ -29,7 +29,7 @@ with open('yelp_academic_dataset_user.json') as fileobject:
 			cur = db_conn.cursor()
 			cur.execute("insert into user_friends (user_id, friend_user_id) values(%s, %s)", (data['user_id'], data['friends'][i]))
 			db_conn.commit()
-			print(i)
+			#print(i)
 			i += 1
 		
 # Close database connection
