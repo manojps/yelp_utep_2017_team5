@@ -12,7 +12,7 @@ import json
 data = []
 
 # Open a connection to the database
-db_conn = psycopg2.connect("dbname='yelp' host='localhost' user='manoj' password='^&YTGXXkhashfghs)('")
+db_conn = psycopg2.connect("dbname='database_name' host='server_address' user='username' password='password'")
 
 # Iteratively commit the data from the list in database
 with open('yelp_academic_dataset_tip.json') as fileobject:
