@@ -16,11 +16,12 @@ with open('yelp_academic_dataset_user.json') as fileobject:
 		page = requests.get(url)
 		tree =  html.fromstring(page.text)
 		user_location = tree.xpath('//*[@class="user-location alternate"]/text()')
+		if (len(user_location)== 0):
+			continue
+
 		location = user_location[0].split(', ')
 
-		if (len(location)== 0):
-			continue
-		elif (len(location) < 2):
+		if (len(location) < 2):
 			location.append(location [0])
 			location[0] = ''
 		elif (len(location) > 2):
