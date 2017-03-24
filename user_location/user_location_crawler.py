@@ -18,11 +18,12 @@ with open('yelp_academic_dataset_user.json') as fileobject:
 		user_location = tree.xpath('//*[@class="user-location alternate"]/text()')
 		location = user_location[0].split(', ')
 
-		if (len(location) < 2):
+		if (len(location)== 0):
+			continue
+		elif (len(location) < 2):
 			location.append(location [0])
 			location[0] = ''
-
-		if (len(location) > 2):
+		elif (len(location) > 2):
 			location [0] = location[1]
 			location[1] = location[2]
 
