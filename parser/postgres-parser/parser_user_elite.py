@@ -1,6 +1,7 @@
 # Parse user data in a Postgres database
 # Version 1.0
 # Author: Manoj Pravakar Saha
+# This work is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 # Import Psycopg Postgres adapter for Python
 import psycopg2

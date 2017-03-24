@@ -1,6 +1,7 @@
 # Parse business categories each business is listed under into a Postgres database. If a business is listed under three different categories then the categories will be parsed into three different rows.
 # Version 1.0
 # Author: Manoj Pravakar Saha
+# This work is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 # Import Psycopg Postgres adapter for Python
 import psycopg2
