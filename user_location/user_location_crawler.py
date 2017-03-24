@@ -8,8 +8,6 @@ import json
 
 conn = psycopg2.connect("dbname='database' host='host_address' user='username' password='password'")
 
-url_seed = 'https://www.yelp.com/user_details?userid='
-
 with open('yelp_academic_dataset_user.json') as fileobject:
 	for line in fileobject:
 		data = json.loads(line)
