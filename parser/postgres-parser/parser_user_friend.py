@@ -1,7 +1,7 @@
 # Parse friend's of users in a table
 # Version 1.0
 # Author: Manoj Pravakar Saha
-# This work is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International License.
+# This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 # Database table creation query
 # create table user_friends(user_id varchar(50), friend_user_id varchar(50));

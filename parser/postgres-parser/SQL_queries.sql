@@ -1,4 +1,4 @@
-﻿create database yelp;
+
 
 create table user_friends (user_id varchar(50), friend_user_id varchar(50));
 
