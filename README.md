@@ -21,6 +21,7 @@ Folder structure
 <b>topical_authority_classifier</b>: Scripts to classify topical authority of users
 
 <b>user_location</b>: Gaussian Mixture Model implementation and yelp website crawler (not based on an actual spider)
+<br>
 ---------------------------
 Scripts needed for calculating P(LocalCategoryElite)
 
