@@ -22,5 +22,6 @@ topical_authority_classifier: Scripts to classify topical authority of users
 
 user_location: Gaussian Mixture Model implementation and yelp website crawler (not based on an actual spider)
 
+------------------------------------------------------
 
 This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
