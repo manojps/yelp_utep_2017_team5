@@ -1,4 +1,4 @@
-# Load necessary libraries
+# User location centroid calculations using GMM without parallel proccessing
 import psycopg2  # For connecting to PostgreSQL database
 import pandas as pd # Data analysis toolkit with flexible data structures
 import numpy as np # Fundamental toolkit for scientific computation with N-dimensional array support

@@ -1,3 +1,5 @@
+# Sciprt to calculate user location centroids with parallel processing
+
 import multiprocessing
 import psycopg2  # For connecting to PostgreSQL database
 import pandas as pd # Data analysis toolkit with flexible data structures
@@ -5,16 +7,20 @@ import numpy as np # Fundamental toolkit for scientific computation with N-dimen
 from sklearn.mixture import GaussianMixture # Gaussian Mixutre Model in scikit-learn
 from sqlalchemy import create_engine
 
+# Connect to database and collect business location for all reviwes posted by users
 conn = psycopg2.connect("dbname='yelp' host='' user='' password=''")
 cur = conn.cursor()
 cur.execute("select r.user_id, b.latitude, b.longitude, b.city from review as r join business as b on b.business_id = r.business_id order by user_id;")
 data = cur.fetchall()
 
+# Save the fetched data into a dataframe
 df = pd.DataFrame(data)
 df.rename(columns={df.columns[0]: 'user_id', df.columns[1]: 'latitude', df.columns[2]: 'longitude',  df.columns[3]: 'city'}, inplace=True)
 
+# Create a list of unique users from the dataframe
 users = df.user_id.unique()
-frames = {}
+
+#frames = {}
 
 # for user in users:
 #     t = df.loc[df['user_id'] == user]
@@ -23,6 +29,7 @@ frames = {}
 col = ['user_id', 'latitude', 'longitude', 'probability']
 t = pd.DataFrame(columns=col)
 
+# Function to calculate user location centroids
 def user_location(user):
     columns = ['user_id']
     location = pd.DataFrame(columns=columns)
@@ -52,11 +59,15 @@ def user_location(user):
     return location2
 
 if __name__ == '__main__':
+    # Run the calculations in parallel
     pool = multiprocessing.Pool(processes=8)
     results = pool.map(user_location, users)
     #loc_temp.head()
     #print(type(results))
+
+    # Serialize the results of GMM calculations into a dataframe
     for result in results:
         t = t.append(result)
+    # Save dataframe into a datbase
     engine = create_engine('postgresql://user:pass)(@server-ip:5432/yelp')
     t.to_sql('user_location_parallel', engine)
