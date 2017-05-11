@@ -71,3 +71,6 @@ df5['lv_sp_elite'] = (df5['elite_prob']*df5['lv_prob']*df5['shopping_prob'])
 # Write the data into database
 engine = create_engine('postgresql://username:pass)(@server-ip:5432/yelp')
 df5.to_sql('local_category_elite2', engine)
+
+cur.close()
+conn.close()

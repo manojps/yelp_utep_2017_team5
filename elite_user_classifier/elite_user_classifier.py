@@ -88,3 +88,6 @@ print("ARI = ", ari)
 
 # Get feature improtance for Random Forest
 print (sorted(zip(map(lambda x: round(x, 4), clf.feature_importances_), list(t.columns.values)), reverse=True))
+
+cur.close()
+conn.close()

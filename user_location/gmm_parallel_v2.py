@@ -29,6 +29,9 @@ users = df.user_id.unique()
 col = ['user_id', 'latitude', 'longitude', 'probability']
 t = pd.DataFrame(columns=col)
 
+cur.close()
+conn.close()
+
 # Function to calculate user location centroids
 def user_location(user):
     columns = ['user_id']

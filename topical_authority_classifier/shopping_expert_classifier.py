@@ -52,3 +52,6 @@ df.rename(columns={df.columns[1]: 'shopping_authority_prob'}, inplace=True)
 z = pd.factorize(test['topic_authority'])[0]
 ari = adjusted_rand_score(z, df['topic_authority_label'].values)
 print("ARI = ", ari)
+
+cur.close()
+conn.close()
