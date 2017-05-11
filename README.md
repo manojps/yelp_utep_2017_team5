@@ -21,15 +21,16 @@ Folder structure
 <b>topical_authority_classifier</b>: Scripts to classify topical authority of users
 
 <b>user_location</b>: Gaussian Mixture Model implementation and yelp website crawler (not based on an actual spider)
-<br>
----------------------------
+
+
+---------
 Scripts needed for calculating P(LocalCategoryElite)
 
 You would need the following four scripts to calculate P(LCE):
 
 <ul>
 <li>user_location/gmm_parallel_v2.py for user location estimation</li>
-<li>/topical_authority_classifier/topic_expert_classifier.py for topical authority calculation</li>
+<li>topical_authority_classifier/topic_expert_classifier.py for topical authority calculation</li>
 <li>elite_user_classifier/elite_user_classifier.py for classifying elite users</li>
 <li>LCE_detection/lce_detection.py to combine the results of the above three and calculate the P(LCE) score</li>
 </ul>
