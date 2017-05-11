@@ -64,7 +64,9 @@ train, test = train_test_split(df_merge, test_size = 0.3)
 
 # Initialize classificatio algorithm
 clf = RandomForestClassifier(n_jobs=8)
+#clf = GaussianNB()
 #clf = linear_model.LogisticRegression()
+
 y = pd.factorize(train['elite'])[0]
 #features = ['review_count', 'avg_review_len', 'avg_rating','funny','useful','cool','fans','friend_count','tips_count' ]
 features = ['review_count_2', 'avg_review_len', 'avg_rating','funny','useful','cool','friend_count','tips_count', 'fans', 'month_active']
